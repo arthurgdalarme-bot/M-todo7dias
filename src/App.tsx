@@ -4,7 +4,7 @@ import { PageRenderer } from './components/Renderer';
 import { Node } from './types';
 import { AnimatePresence } from 'motion/react';
 
-import { ShieldCheck, Lock } from 'lucide-react';
+import { ShieldCheck, Lock, MessageCircle } from 'lucide-react';
 
 export default function App() {
   // Find the initial node
@@ -82,6 +82,20 @@ export default function App() {
           <p>&copy; 2026 {PROJECT_DATA.name}. Todos os direitos reservados.</p>
         </div>
       </footer>
+
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/5527997365570"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 p-3 bg-white border border-gray-200 rounded-full shadow-lg hover:shadow-xl transition-all group z-50 flex items-center gap-0 hover:gap-2 overflow-hidden"
+        aria-label="WhatsApp"
+      >
+        <span className="text-xs font-medium text-gray-600 max-w-0 group-hover:max-w-[150px] transition-all duration-300 whitespace-nowrap opacity-0 group-hover:opacity-100">
+          Dúvidas? Fale conosco
+        </span>
+        <MessageCircle className="w-6 h-6 text-emerald-500 shrink-0" />
+      </a>
     </div>
   );
 }
